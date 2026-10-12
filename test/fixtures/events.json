@@ -1,0 +1,121 @@
+{
+  "description": "Synthetic events: the sender's own expected envelope, and the wallet and test events shown in the developer guide.",
+  "senderEnvelope": {
+    "id": "42161:0xblock:17:0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:taker-fill:-",
+    "type": "boros.wallet_event",
+    "version": 1,
+    "subscription_id": "sub_aaaaaaaaaaaaaaaaaaaa",
+    "matched": {
+      "actions": [
+        "taker-fill"
+      ]
+    },
+    "origin": "live",
+    "times": {
+      "block": 1790266862,
+      "received_ms": 1790266864120,
+      "committed_ms": 1790266864410,
+      "sent_ms": 1790266864902
+    },
+    "event": {
+      "alertId": "42161:0xblock:17:0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:taker-fill:-",
+      "chainId": 42161,
+      "walletRoot": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "role": "taker-fill",
+      "category": "trade",
+      "eventName": "MarketOrdersFilled",
+      "marketId": 197,
+      "marketSymbol": "BINANCE-ETHUSDT-30OCT2026",
+      "quantity": {
+        "raw": "1000000000000000000",
+        "decimals": 18,
+        "unit": "yu"
+      },
+      "side": "long-yu",
+      "rate": {
+        "source": "execution",
+        "aprLow": 0.0713,
+        "aprHigh": 0.0713
+      },
+      "orderId": null,
+      "accountId": 7,
+      "tokenId": 2,
+      "blockNumber": 508495079,
+      "blockHash": "0xblock",
+      "logIndex": 17,
+      "transactionHash": "0xtx",
+      "timestamp": 1790266862,
+      "timestampIso": "2026-09-24T16:21:02.000Z",
+      "details": {},
+      "links": {
+        "explorerTx": "https://borosexplorer.com/tx/0xtx",
+        "explorerWallet": "https://borosexplorer.com/wallet/0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "explorerMarket": "https://borosexplorer.com/market/197",
+        "arbiscanTx": "https://arbiscan.io/tx/0xtx"
+      },
+      "text": "taker-fill · BINANCE-ETHUSDT-30OCT2026 · long 1 YU at 7.13%"
+    }
+  },
+  "walletEvent": {
+    "id": "42161:0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb:17:0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:taker-fill:-",
+    "type": "boros.wallet_event",
+    "version": 1,
+    "subscription_id": "sub_aaaaaaaaaaaaaaaaaaaa",
+    "matched": {
+      "actions": [
+        "taker-fill"
+      ]
+    },
+    "origin": "live",
+    "times": {
+      "block": 1790266862,
+      "received_ms": 1790266864120,
+      "committed_ms": 1790266864410,
+      "sent_ms": 1790266864902
+    },
+    "event": {
+      "alertId": "42161:0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb:17:0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:taker-fill:-",
+      "chainId": 42161,
+      "walletRoot": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "role": "taker-fill",
+      "category": "trade",
+      "eventName": "MarketOrdersFilled",
+      "marketId": 197,
+      "marketSymbol": "BINANCE-ETHUSDT-30OCT2026",
+      "quantity": {
+        "raw": "1000000000000000000",
+        "decimals": 18,
+        "unit": "yu"
+      },
+      "side": "long-yu",
+      "rate": {
+        "source": "execution",
+        "aprLow": 0.0713,
+        "aprHigh": 0.0713
+      },
+      "orderId": null,
+      "accountId": 7,
+      "tokenId": 2,
+      "blockNumber": 508495079,
+      "blockHash": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "logIndex": 17,
+      "transactionHash": "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "timestamp": 1790266862,
+      "timestampIso": "2026-09-24T16:21:02.000Z",
+      "details": {},
+      "links": {
+        "explorerTx": "https://borosexplorer.com/tx/0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "explorerWallet": "https://borosexplorer.com/wallet/0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "explorerMarket": "https://borosexplorer.com/market/197",
+        "arbiscanTx": "https://arbiscan.io/tx/0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "text": "taker-fill · BINANCE-ETHUSDT-30OCT2026 · long 1 YU at 7.13%"
+    }
+  },
+  "testEvent": {
+    "id": "test_00000000-0000-4000-8000-000000000001",
+    "type": "boros.webhook.test",
+    "version": 1,
+    "subscription_id": "sub_aaaaaaaaaaaaaaaaaaaa"
+  }
+}

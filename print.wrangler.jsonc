@@ -1,0 +1,14 @@
+// The print receiver (print-receiver.js). From this directory:
+//   npx wrangler deploy --config print.wrangler.jsonc
+//   npx wrangler tail --config print.wrangler.jsonc
+{
+  "name": "boros-webhook-print",
+  "main": "print-receiver.js",
+  "compatibility_date": "2026-08-01",
+  // Console lines are kept; invocation logs are off because they record the
+  // request URL, which contains HOOK_PATH.
+  "observability": { "enabled": true, "logs": { "invocation_logs": false } }
+  // Optional secrets, set with `npx wrangler secret put <NAME> --config print.wrangler.jsonc`:
+  //   HOOK_PATH        random path segment; without it the receiver answers on every path
+  //   SIGNING_SECRETS  {"sub_…":"whsec_…"} to require valid signatures for those subscriptions
+}

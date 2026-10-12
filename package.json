@@ -1,0 +1,22 @@
+{
+  "name": "boros-webhook-receivers",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Example receivers for Boros Explorer wallet webhooks",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "tsx --test test/*.test.ts",
+    "deploy:print": "wrangler deploy --config print.wrangler.jsonc",
+    "tail:print": "wrangler tail --config print.wrangler.jsonc",
+    "deploy": "wrangler deploy",
+    "start:node": "tsx src/node.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.127.1"
+  }
+}

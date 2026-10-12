@@ -1,0 +1,16 @@
+{
+  "description": "Fixed test-only vectors from the sender. Secrets are literal UTF-8 HMAC keys; do not base64-decode whsec_ values. Timestamps are seconds. Body whitespace and UTF-8 bytes are significant.",
+  "signing": {
+    "subscriptionId": "sub_abcdefghijklmnopqrst",
+    "secret": "whsec_YgpH-lcfOhz6e9_-ajK_pZ1PyRyaJP6jMxJhEVpIOEA",
+    "rotatedSecret": "whsec_L2H5zu3qJlBVPh2IqQSStuaYkRAOWACVhETdk0gtWPE"
+  },
+  "delivery": {
+    "timestamp": 1790812800,
+    "rawBody": "{ \"type\": \"boros.webhook.test\", \"version\": 1, \"text\": \"test · ETH → BTC\" }\n",
+    "signature": "64165fc47bb9b05c6820555f0f90054f86463861d6b8fa02d3363ba7bf4a5240",
+    "rotatedSignature": "af2d09efd8f9637cbe30b3c5c5a7d863f13bde1c7fcac46ccec75f74e002472a",
+    "header": "t=1790812800,v1=64165fc47bb9b05c6820555f0f90054f86463861d6b8fa02d3363ba7bf4a5240",
+    "rotatedHeader": "t=1790812800,v1=af2d09efd8f9637cbe30b3c5c5a7d863f13bde1c7fcac46ccec75f74e002472a,v1=64165fc47bb9b05c6820555f0f90054f86463861d6b8fa02d3363ba7bf4a5240"
+  }
+}

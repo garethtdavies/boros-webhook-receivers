@@ -1,0 +1,24 @@
+// Example Boros webhook receiver. Deploy with `npx wrangler deploy` from this
+// directory after the setup steps in SETUP.md. No secrets belong in this file.
+{
+  "name": "boros-webhook-receiver",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-01",
+  // Console lines are kept (they carry IDs and outcomes only). Invocation logs
+  // are off because they record the request URL, which contains HOOK_PATH.
+  "observability": { "enabled": true, "logs": { "invocation_logs": false } },
+  "kv_namespaces": [
+    // Replace with the id printed by: npx wrangler kv namespace create RECEIVER_KV
+    { "binding": "RECEIVER_KV", "id": "REPLACE_WITH_KV_NAMESPACE_ID" }
+  ],
+  "vars": {
+    // Comma-separated subscription IDs to stop with HTTP 410 (lost-credential recovery).
+    "REFUSED_SUBSCRIPTION_IDS": "",
+    // Testing only: "500" (or 429, 502, 503...) makes verified events fail so you can watch retries.
+    "FORCE_DELIVERY_STATUS": ""
+  }
+  // Secrets, set with `npx wrangler secret put <NAME>`:
+  //   HOOK_PATH        random path segment, 24+ characters of [A-Za-z0-9_-]
+  //   SIGNING_SECRETS  {"sub_…":"whsec_…"} from each registration response
+  //   ADMIN_TOKEN      optional, 24+ characters; enables GET /hook/<HOOK_PATH>/admin
+}
